@@ -119,7 +119,10 @@ export default function Example() {
     return {
       transform: [
         {scale: Math.max(disappearence, 0.8)},
-        {translateY: Math.abs(translationY.value) * 0.8},
+        {
+          translateY:
+            translationY.value < 0 ? 0 : Math.abs(translationY.value) * 0.8,
+        },
       ],
       opacity: disappearence,
     };
