@@ -49,7 +49,7 @@ const Track = props => {
 };
 
 export default function Example() {
-  const [visible, setVisible] = useState(false);
+  const [searchBarVisible, setSearchBarVisible] = useState(false);
 
   const BLACK = '#121212';
   const GREEN = '#1DB954';
@@ -63,9 +63,9 @@ export default function Example() {
       'worklet';
       translationY.value = e.contentOffset.y;
       if (e.contentOffset.y < -50) {
-        if (!visible) runOnJS(setVisible)(true);
+        if (!searchBarVisible) runOnJS(setSearchBarVisible)(true);
       } else if (e.contentOffset.y > 0) {
-        runOnJS(setVisible)(false);
+        runOnJS(setSearchBarVisible)(false);
       }
     },
   });
@@ -111,7 +111,7 @@ export default function Example() {
       translationY.value > 0
         ? 1 -
           Math.abs(
-            visible
+            searchBarVisible
               ? translationY.value / (IMAGE_SIZE + 50)
               : translationY.value / IMAGE_SIZE,
           )
@@ -207,8 +207,8 @@ export default function Example() {
         <LinearGradient colors={[CORNFLOWERBLUE, BLACK]}>
           <Animated.View
             style={{
-              marginTop: visible ? 100 : 0,
-              opacity: visible ? 1 : 0,
+              marginTop: searchBarVisible ? 100 : 0,
+              opacity: searchBarVisible ? 1 : 0,
             }}>
             <View
               style={{
