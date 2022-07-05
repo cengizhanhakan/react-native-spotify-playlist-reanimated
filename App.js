@@ -64,7 +64,7 @@ export default function Example() {
       translationY.value = e.contentOffset.y;
       if (e.contentOffset.y < -50) {
         if (!searchBarVisible) runOnJS(setSearchBarVisible)(true);
-      } else if (e.contentOffset.y > 0) {
+      } else if (e.contentOffset.y > 80) {
         runOnJS(setSearchBarVisible)(false);
       }
     },
@@ -143,6 +143,20 @@ export default function Example() {
       display: cond ? 'flex' : 'none',
     };
   });
+
+  const searchBarVisibility = useAnimatedStyle(() => {
+    const opacity = searchBarVisible
+      ? 1 - Math.abs(translationY.value) / 100
+      : 0;
+
+    return {
+      opacity,
+      //causes crash idk why
+      //marginTop: opacity > 0 ? 100 : 0,
+      //marginBottom: opacity > 0 ? 50 : 0,
+    };
+  });
+
   return (
     <View style={styles.container}>
       <Animated.View
@@ -209,10 +223,10 @@ export default function Example() {
         }}>
         <LinearGradient colors={[CORNFLOWERBLUE, BLACK]}>
           <Animated.View
-            style={{
-              marginTop: searchBarVisible ? 100 : 0,
-              opacity: searchBarVisible ? 1 : 0,
-            }}>
+            style={[
+              searchBarVisibility,
+              {marginTop: searchBarVisible ? 100 : 0},
+            ]}>
             <View
               style={{
                 paddingHorizontal: 15,
