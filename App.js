@@ -205,55 +205,57 @@ export default function Example() {
           paddingBottom: 30,
         }}>
         <LinearGradient colors={[CORNFLOWERBLUE, BLACK]}>
-          {visible && (
-            <View style={{marginTop: 100}}>
+          <Animated.View
+            style={{
+              marginTop: visible ? 100 : 0,
+              opacity: visible ? 1 : 0,
+            }}>
+            <View
+              style={{
+                paddingHorizontal: 15,
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+              }}>
               <View
                 style={{
-                  paddingHorizontal: 15,
+                  backgroundColor: 'rgba(0,0,0,0.2)',
+                  width: '80%',
+                  padding: 10,
+                  borderRadius: 4,
                   flexDirection: 'row',
-                  justifyContent: 'space-between',
+                  alignItems: 'center',
                 }}>
-                <View
+                <Ionicons name="search-sharp" color="white" size={18} />
+                <Text
                   style={{
-                    backgroundColor: 'rgba(0,0,0,0.2)',
-                    width: '80%',
-                    padding: 10,
-                    borderRadius: 4,
-                    flexDirection: 'row',
-                    alignItems: 'center',
+                    marginLeft: 8,
+                    fontSize: 14,
+                    color: 'white',
+                    fontFamily: 'CircularStd-Black',
                   }}>
-                  <Ionicons name="search-sharp" color="white" size={18} />
-                  <Text
-                    style={{
-                      marginLeft: 8,
-                      fontSize: 14,
-                      color: 'white',
-                      fontFamily: 'CircularStd-Black',
-                    }}>
-                    Find in playlist
-                  </Text>
-                </View>
-                <View
+                  Find in playlist
+                </Text>
+              </View>
+              <View
+                style={{
+                  borderRadius: 4,
+                  backgroundColor: 'rgba(0,0,0,0.2)',
+                  width: '15%',
+                  padding: 10,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}>
+                <Text
                   style={{
-                    borderRadius: 4,
-                    backgroundColor: 'rgba(0,0,0,0.2)',
-                    width: '15%',
-                    padding: 10,
-                    alignItems: 'center',
-                    justifyContent: 'center',
+                    fontSize: 14,
+                    color: 'white',
+                    fontFamily: 'CircularStd-Black',
                   }}>
-                  <Text
-                    style={{
-                      fontSize: 14,
-                      color: 'white',
-                      fontFamily: 'CircularStd-Black',
-                    }}>
-                    Sort
-                  </Text>
-                </View>
+                  Sort
+                </Text>
               </View>
             </View>
-          )}
+          </Animated.View>
           <Animated.Image
             source={album}
             style={[styles.image, pullBackStyle, headerImageStyle]}
