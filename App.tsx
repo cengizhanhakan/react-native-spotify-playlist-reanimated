@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import {View, StyleSheet, Text, ActivityIndicator} from 'react-native';
 import album from './src/assets/images/albumcover.jpeg';
 import Animated, {
   useSharedValue,
@@ -154,7 +154,14 @@ export default function App() {
     };
   });
 
-  if (isLoading) return null;
+  if (isLoading)
+    return (
+      <ActivityIndicator
+        style={{flex: 1, backgroundColor: Colors.BLACK}}
+        color={Colors.GREEN}
+        size="large"
+      />
+    );
 
   return (
     <View style={styles.container}>
