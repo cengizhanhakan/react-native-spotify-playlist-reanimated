@@ -3,7 +3,7 @@ import {View, Text, Image, StyleSheet} from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {Track as TrackType} from '../types';
 
-export const Track = ({name, cover, artists}: TrackType) => {
+export const Track = ({id, name, cover, artists}: TrackType) => {
   const styles = StyleSheet.create({
     container: {
       flexDirection: 'row',
