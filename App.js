@@ -159,7 +159,7 @@ export default function Example() {
   });
 
   const fixedHeaderShuffleTextStyle = useAnimatedStyle(() => {
-    const cond = translationY.value > IMAGE_SIZE + 185;
+    const cond = translationY.value > IMAGE_SIZE + 235;
     return {
       opacity: cond,
       display: cond ? 'flex' : 'none',
