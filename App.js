@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {View, StyleSheet, Text, Alert, Image} from 'react-native';
 import album from './src/albumcover.jpeg';
 import Animated, {
   useSharedValue,
@@ -12,29 +12,34 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import axios from 'axios';
 
-const Track = props => {
+const Track = ({name, cover, artists}) => {
   return (
-    <View style={{flexDirection: 'row', padding: 20}}>
+    <View style={{flexDirection: 'row', padding: 20, alignItems: 'center'}}>
       <View style={{flexDirection: 'row', alignItems: 'center'}}>
-        <View style={{width: 40, height: 40, backgroundColor: 'red'}} />
-        <View style={{marginLeft: 25}}>
+        <Image style={{width: 54, height: 54}} source={{uri: cover}} />
+        <View style={{marginLeft: 18, width: '75%'}}>
           <Text
+            ellipsizeMode="tail"
+            numberOfLines={1}
             style={{
               color: 'white',
               fontSize: 16,
               fontFamily: 'CircularStd-Medium',
             }}>
-            Allah Belanı Versin
+            {name}
           </Text>
           <Text
+            ellipsizeMode="tail"
+            numberOfLines={1}
             style={{
               fontSize: 14,
               color: '#c4c4c4',
               marginTop: 2,
               fontFamily: 'CircularStd-Medium',
             }}>
-            İsmail YK
+            {artists}
           </Text>
         </View>
       </View>
@@ -48,8 +53,58 @@ const Track = props => {
   );
 };
 
+const playlistId = '37i9dQZF1EpjkVvtHAtmpC';
+
+const bearerToken =
+  'BQB-im0NWSYIBckB9IJWjQIMgWYD7Z5X-YwMZHBpvnOcMMX2Cj2SJHQ19soaWvxRcC9bpmHIAHFRfZOqmjKNolLYY4n2ubpYdDwsRqipsd_HqcKyanuGlQr0Bu1IRPHgLHbKrKRUTlFnGNEciket-OVezA_YKQVauf67JXFQqkIYK2XI96bDeDcXVDMR';
+
 export default function App() {
   const [searchBarVisible, setSearchBarVisible] = useState(false);
+
+  const [isLoading, setIsLoading] = useState(false);
+
+  const [playlistData, setPlaylistData] = useState([]);
+
+  const playlistTrackParser = items => {
+    if (!items) return [];
+
+    const result = [];
+
+    for (const item of items) {
+      const track = {
+        id: item.track.id,
+        name: item.track.name,
+        cover: item.track.album.images[0].url,
+        artists: item.track.artists.map(artist => artist.name).join(', '),
+      };
+      result.push(track);
+    }
+
+    return result;
+  };
+
+  const fetchPlaylist = async () => {
+    setIsLoading(true);
+    try {
+      const {data} = await axios.get(
+        `https://api.spotify.com/v1/playlists/${playlistId}?fields=tracks(items)`,
+        {
+          headers: {
+            Authorization: `Bearer ${bearerToken}`,
+          },
+        },
+      );
+
+      setPlaylistData(playlistTrackParser(data.tracks.items));
+      setIsLoading(false);
+    } catch (e) {
+      Alert.alert('Error', 'Something went wrong. You might want to restart.');
+    }
+  };
+
+  useEffect(() => {
+    fetchPlaylist();
+  }, []);
 
   const BLACK = '#121212';
   const GREEN = '#1DB954';
@@ -179,6 +234,8 @@ export default function App() {
       //marginBottom: opacity > 0 ? 50 : 0,
     };
   });
+
+  if (isLoading) return null;
 
   return (
     <View style={styles.container}>
@@ -382,21 +439,14 @@ export default function App() {
             </View>
           </View>
         </LinearGradient>
-        <Track />
-        <Track />
-        <Track />
-        <Track />
-        <Track />
-        <Track />
-        <Track />
-        <Track />
-        <Track />
-        <Track />
-        <Track />
-        <Track />
-        <Track />
-        <Track />
-        <Track />
+        {playlistData.map(item => (
+          <Track
+            key={item.id}
+            name={item.name}
+            cover={item.cover}
+            artists={item.artists}
+          />
+        ))}
       </Animated.ScrollView>
     </View>
   );
