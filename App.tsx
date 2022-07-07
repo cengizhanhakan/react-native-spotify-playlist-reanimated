@@ -261,13 +261,13 @@ export default function App() {
             On Repeat
           </Text>
         </LinearGradient>
-        <Ionicons
-          style={{left: 15, top: 50, position: 'absolute'}}
-          name="chevron-back-sharp"
-          color="white"
-          size={24}
-        />
       </Animated.View>
+      <Ionicons
+        style={{left: 15, top: 50, position: 'absolute', zIndex: 5}}
+        name="chevron-back-sharp"
+        color="white"
+        size={24}
+      />
       <Animated.ScrollView
         onScroll={scrollHandler}
         scrollEventThrottle={16}
