@@ -21,8 +21,7 @@ import {playlistTrackParser} from './src/utils/parsers/contentParsers';
 const playlistId = '37i9dQZF1EpjkVvtHAtmpC';
 
 const bearerToken =
-  'BQAzRFGi9DfeFChOpgpsSlpZLWCfeLhSzxac_2Pe9XsUfUM0HwIBXBer0oKHoJ1L2JTVuC8GxIkejbeYL3rPYUGC5RM5U3fAcnH7BwDIvhQRpQsun_zs3K0WCi05inzQGl346F-8GmRt_tUaeroXkXsq8c4eIUeb3U53cMGd5cYOC3VNjE7iRrg2CK2T';
-
+  'BQATS5IzP39l85OrBAF4JIf-ecQ7VYeiOHrgc6MdMTocDyri8YHnjuB0p6mzaRGeyYKsRr1w_ivSgW0UwYOKNQH0qSDTcEsj1S3uLoTuI3NMh2ucVN0agSVFeP049xXSKN1biMXlc1Ud3Z2W5RdHsTntmWBLcHoRpTfOBjDXWFhT5HqgNm1g5z5eIIlp';
 export default function App() {
   const [searchBarVisible, setSearchBarVisible] = useState(false);
 
@@ -99,6 +98,24 @@ export default function App() {
       marginBottom: 20,
       width: '100%',
       height: Sizes.PLAYLIST_COVER_SIZE,
+    },
+    shuffleIconContainer: {
+      position: 'absolute',
+      bottom: 5,
+      right: 5,
+      borderRadius: 50,
+      width: 14,
+      padding: 2,
+      height: 14,
+      backgroundColor: Colors.LIGHTBLACK,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    headerItem: {
+      borderRadius: 4,
+      backgroundColor: 'rgba(0,0,0,0.2)',
+      padding: 10,
+      alignItems: 'center',
     },
   });
 
@@ -183,22 +200,9 @@ export default function App() {
           {position: 'absolute', zIndex: 5, top: 60, right: 20},
           fixedHeaderShuffleTextStyle,
         ]}>
-        <View style={{flexDirection: 'row'}}>
-          <Ionicons name="play-circle-sharp" color={Colors.GREEN} size={60} />
-          <View
-            style={{
-              position: 'absolute',
-              bottom: 5,
-              right: 5,
-              borderRadius: 50,
-              width: 14,
-              height: 14,
-              backgroundColor: Colors.LIGHTBLACK,
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-            <Entypo name="shuffle" color={Colors.GREEN} size={12} />
-          </View>
+        <Ionicons name="play-circle-sharp" color={Colors.GREEN} size={60} />
+        <View style={styles.shuffleIconContainer}>
+          <Entypo name="shuffle" color={Colors.GREEN} size={10} />
         </View>
       </Animated.View>
       <Animated.View
@@ -227,7 +231,7 @@ export default function App() {
           ]}>
           <Text
             style={{
-              color: 'white',
+              color: Colors.WHITE,
               marginTop: 24,
               fontSize: 18,
               fontFamily: Fonts.BLACK,
@@ -263,19 +267,16 @@ export default function App() {
               }}>
               <View
                 style={{
-                  backgroundColor: 'rgba(0,0,0,0.2)',
                   width: '80%',
-                  padding: 10,
-                  borderRadius: 4,
                   flexDirection: 'row',
-                  alignItems: 'center',
+                  ...styles.headerItem,
                 }}>
                 <Ionicons name="search-sharp" color="white" size={18} />
                 <Text
                   style={{
                     marginLeft: 8,
                     fontSize: 14,
-                    color: 'white',
+                    color: Colors.WHITE,
                     fontFamily: Fonts.BLACK,
                   }}>
                   Find in playlist
@@ -283,17 +284,14 @@ export default function App() {
               </View>
               <View
                 style={{
-                  borderRadius: 4,
-                  backgroundColor: 'rgba(0,0,0,0.2)',
                   width: '15%',
-                  padding: 10,
-                  alignItems: 'center',
                   justifyContent: 'center',
+                  ...styles.headerItem,
                 }}>
                 <Text
                   style={{
                     fontSize: 14,
-                    color: 'white',
+                    color: Colors.WHITE,
                     fontFamily: Fonts.BLACK,
                   }}>
                   Sort
@@ -331,7 +329,7 @@ export default function App() {
               </Text>
               <Text
                 style={{
-                  color: 'white',
+                  color: Colors.WHITE,
                   fontSize: 16,
                   fontFamily: Fonts.BLACK,
                   marginLeft: 4,
@@ -341,7 +339,7 @@ export default function App() {
             </View>
             <Text
               style={{
-                color: 'white',
+                color: Colors.WHITE,
                 fontSize: 16,
                 fontFamily: Fonts.MEDIUM,
               }}>
@@ -368,25 +366,14 @@ export default function App() {
               style={{marginLeft: 20}}
               size={24}
             />
-            <View style={{flexDirection: 'row', marginLeft: 'auto'}}>
+            <View style={{marginLeft: 'auto'}}>
               <Ionicons
                 name="play-circle-sharp"
                 color={Colors.GREEN}
                 size={60}
               />
-              <View
-                style={{
-                  position: 'absolute',
-                  bottom: 5,
-                  right: 5,
-                  borderRadius: 50,
-                  width: 18,
-                  height: 18,
-                  backgroundColor: Colors.LIGHTBLACK,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                <Entypo name="shuffle" color={Colors.GREEN} size={12} />
+              <View style={styles.shuffleIconContainer}>
+                <Entypo name="shuffle" color={Colors.GREEN} size={10} />
               </View>
             </View>
           </View>
