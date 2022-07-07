@@ -1,0 +1,7 @@
+export const Colors = {
+  BLACK: '#121212',
+  GREEN: '#1DB954',
+  LIGHTBLACK: '#212121',
+  LIGHTCORNFLOWERBLUE: '#6495ED',
+  CORNFLOWERBLUE: '#5077BE',
+};

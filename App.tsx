@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {View, StyleSheet, Text, Alert, Image} from 'react-native';
+import {View, StyleSheet, Text, Alert} from 'react-native';
 import album from './src/assets/images/albumcover.jpeg';
 import Animated, {
   useSharedValue,
@@ -15,6 +15,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import axios from 'axios';
 import {Track} from './src/components/Track';
 import {Track as TrackType} from './src/types';
+import {Colors} from './src/constants/colors';
 
 const playlistId = '37i9dQZF1EpjkVvtHAtmpC';
 
@@ -72,9 +73,6 @@ export default function App() {
     fetchPlaylist();
   }, []);
 
-  const BLACK = '#121212';
-  const GREEN = '#1DB954';
-  const LIGHTERBLACK = '#212121';
   const IMAGE_SIZE = 250;
 
   const translationY = useSharedValue(0);
@@ -90,9 +88,6 @@ export default function App() {
       }
     },
   });
-
-  const CORNFLOWERBLUE = '#6495ED';
-  const CORNFLOWERBLUE2 = '#5077BE';
 
   const pullBackStyle = useAnimatedStyle(() => {
     const scaleX = Math.abs(translationY.value) / 180;
@@ -113,7 +108,7 @@ export default function App() {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: BLACK,
+      backgroundColor: Colors.BLACK,
     },
     image: {
       marginTop: 50,
@@ -210,7 +205,7 @@ export default function App() {
           fixedHeaderShuffleTextStyle,
         ]}>
         <View style={{flexDirection: 'row'}}>
-          <Ionicons name="play-circle-sharp" color={GREEN} size={60} />
+          <Ionicons name="play-circle-sharp" color={Colors.GREEN} size={60} />
           <View
             style={{
               position: 'absolute',
@@ -219,11 +214,11 @@ export default function App() {
               borderRadius: 50,
               width: 14,
               height: 14,
-              backgroundColor: LIGHTERBLACK,
+              backgroundColor: Colors.LIGHTBLACK,
               alignItems: 'center',
               justifyContent: 'center',
             }}>
-            <Entypo name="shuffle" color={GREEN} size={12} />
+            <Entypo name="shuffle" color={Colors.GREEN} size={12} />
           </View>
         </View>
       </Animated.View>
@@ -246,10 +241,10 @@ export default function App() {
             zIndex: -1,
           }}
           colors={[
-            CORNFLOWERBLUE,
-            CORNFLOWERBLUE,
-            CORNFLOWERBLUE2,
-            CORNFLOWERBLUE2,
+            Colors.LIGHTCORNFLOWERBLUE,
+            Colors.LIGHTCORNFLOWERBLUE,
+            Colors.CORNFLOWERBLUE,
+            Colors.CORNFLOWERBLUE,
           ]}>
           <Text
             style={{
@@ -272,10 +267,10 @@ export default function App() {
         onScroll={scrollHandler}
         scrollEventThrottle={16}
         contentContainerStyle={{
-          backgroundColor: BLACK,
+          backgroundColor: Colors.BLACK,
           paddingBottom: 30,
         }}>
-        <LinearGradient colors={[CORNFLOWERBLUE, BLACK]}>
+        <LinearGradient colors={[Colors.LIGHTCORNFLOWERBLUE, Colors.BLACK]}>
           <Animated.View
             style={[
               searchBarVisibility,
@@ -381,10 +376,10 @@ export default function App() {
               alignItems: 'baseline',
               marginBottom: 10,
             }}>
-            <AntDesign color={GREEN} name="heart" size={24} />
+            <AntDesign color={Colors.GREEN} name="heart" size={24} />
             <MaterialCommunityIcons
               style={{marginLeft: 20}}
-              color={GREEN}
+              color={Colors.GREEN}
               name="download-circle"
               size={24}
             />
@@ -395,7 +390,11 @@ export default function App() {
               size={24}
             />
             <View style={{flexDirection: 'row', marginLeft: 'auto'}}>
-              <Ionicons name="play-circle-sharp" color={GREEN} size={60} />
+              <Ionicons
+                name="play-circle-sharp"
+                color={Colors.GREEN}
+                size={60}
+              />
               <View
                 style={{
                   position: 'absolute',
@@ -404,11 +403,11 @@ export default function App() {
                   borderRadius: 50,
                   width: 18,
                   height: 18,
-                  backgroundColor: LIGHTERBLACK,
+                  backgroundColor: Colors.LIGHTBLACK,
                   alignItems: 'center',
                   justifyContent: 'center',
                 }}>
-                <Entypo name="shuffle" color={GREEN} size={12} />
+                <Entypo name="shuffle" color={Colors.GREEN} size={12} />
               </View>
             </View>
           </View>
