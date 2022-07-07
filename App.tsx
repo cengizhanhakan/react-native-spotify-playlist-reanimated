@@ -15,8 +15,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import axios from 'axios';
 import {Track} from './src/components/Track';
 import {Track as TrackType} from './src/types';
-import {Colors} from './src/constants/colors';
-import {Sizes} from './src/constants/sizes';
+import {Colors, Sizes, Fonts} from './src/constants';
+import {playlistTrackParser} from './src/utils/parsers/contentParsers';
 
 const playlistId = '37i9dQZF1EpjkVvtHAtmpC';
 
@@ -29,26 +29,6 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
 
   const [playlistData, setPlaylistData] = useState<TrackType[]>([]);
-
-  const playlistTrackParser = (items: any[]) => {
-    if (!items || !Array.isArray(items)) return [];
-
-    const result = [];
-
-    for (const item of items) {
-      const track = {
-        id: item.track.id,
-        name: item.track.name,
-        cover: item.track.album.images[0].url,
-        artists: item.track.artists
-          .map((artist: any) => artist.name)
-          .join(', '),
-      };
-      result.push(track);
-    }
-
-    return result;
-  };
 
   const fetchPlaylist = async () => {
     setIsLoading(true);
@@ -93,7 +73,9 @@ export default function App() {
 
   const pullBackStyle = useAnimatedStyle(() => {
     const scaleX = Math.abs(translationY.value) / 180;
+
     const scaleY = Math.abs(translationY.value) / 200;
+
     return {
       transform: [
         {scaleX: translationY.value < -100 ? Math.max(scaleX, 1) : 1},
@@ -116,12 +98,7 @@ export default function App() {
       marginTop: 50,
       marginBottom: 20,
       width: '100%',
-      height: Sizes.IMAGE_SIZE,
-    },
-    artistName: {
-      alignSelf: 'center',
-      color: 'white',
-      fontSize: 60,
+      height: Sizes.PLAYLIST_COVER_SIZE,
     },
   });
 
@@ -132,8 +109,8 @@ export default function App() {
           ? 1 -
             Math.abs(
               searchBarVisible
-                ? translationY.value / (Sizes.IMAGE_SIZE + 50)
-                : translationY.value / Sizes.IMAGE_SIZE,
+                ? translationY.value / (Sizes.PLAYLIST_COVER_SIZE + 50)
+                : translationY.value / Sizes.PLAYLIST_COVER_SIZE,
             )
           : 1;
       return {
@@ -153,8 +130,8 @@ export default function App() {
         ? 1 -
           Math.abs(
             searchBarVisible
-              ? translationY.value / (Sizes.IMAGE_SIZE + 50)
-              : translationY.value / Sizes.IMAGE_SIZE,
+              ? translationY.value / (Sizes.PLAYLIST_COVER_SIZE + 50)
+              : translationY.value / Sizes.PLAYLIST_COVER_SIZE,
           )
         : 1;
     return {
@@ -170,7 +147,7 @@ export default function App() {
   });
 
   const fixedHeaderStyle = useAnimatedStyle(() => {
-    const opacity = (translationY.value - Sizes.IMAGE_SIZE) / 21;
+    const opacity = (translationY.value - Sizes.PLAYLIST_COVER_SIZE) / 21;
 
     return {
       opacity,
@@ -178,7 +155,7 @@ export default function App() {
   });
 
   const fixedHeaderShuffleTextStyle = useAnimatedStyle(() => {
-    const cond = translationY.value > Sizes.IMAGE_SIZE + 170;
+    const cond = translationY.value > Sizes.PLAYLIST_COVER_SIZE + 170;
     return {
       display: cond ? 'flex' : 'none',
     };
@@ -253,7 +230,7 @@ export default function App() {
               color: 'white',
               marginTop: 24,
               fontSize: 18,
-              fontFamily: 'CircularStd-Black',
+              fontFamily: Fonts.BLACK,
             }}>
             On Repeat
           </Text>
@@ -299,7 +276,7 @@ export default function App() {
                     marginLeft: 8,
                     fontSize: 14,
                     color: 'white',
-                    fontFamily: 'CircularStd-Black',
+                    fontFamily: Fonts.BLACK,
                   }}>
                   Find in playlist
                 </Text>
@@ -317,7 +294,7 @@ export default function App() {
                   style={{
                     fontSize: 14,
                     color: 'white',
-                    fontFamily: 'CircularStd-Black',
+                    fontFamily: Fonts.BLACK,
                   }}>
                   Sort
                 </Text>
@@ -332,9 +309,9 @@ export default function App() {
           <View style={{paddingHorizontal: 20, paddingVertical: 10}}>
             <Text
               style={{
-                color: '#c4c4c4',
+                color: Colors.GREY,
                 fontSize: 16,
-                fontFamily: 'CircularStd-Medium',
+                fontFamily: Fonts.MEDIUM,
               }}>
               Songs you love right now
             </Text>
@@ -346,9 +323,9 @@ export default function App() {
               }}>
               <Text
                 style={{
-                  color: '#c4c4c4',
+                  color: Colors.GREY,
                   fontSize: 16,
-                  fontFamily: 'CircularStd-Medium',
+                  fontFamily: Fonts.MEDIUM,
                 }}>
                 Made for
               </Text>
@@ -356,7 +333,7 @@ export default function App() {
                 style={{
                   color: 'white',
                   fontSize: 16,
-                  fontFamily: 'CircularStd-Black',
+                  fontFamily: Fonts.BLACK,
                   marginLeft: 4,
                 }}>
                 Cengizhan Hakan
@@ -366,7 +343,7 @@ export default function App() {
               style={{
                 color: 'white',
                 fontSize: 16,
-                fontFamily: 'CircularStd-Medium',
+                fontFamily: Fonts.MEDIUM,
               }}>
               1 like · 1h 41m
             </Text>
@@ -387,7 +364,7 @@ export default function App() {
             />
             <Entypo
               name="dots-three-horizontal"
-              color="#c4c4c4"
+              color={Colors.GREY}
               style={{marginLeft: 20}}
               size={24}
             />
