@@ -64,7 +64,7 @@ export default function Example() {
       translationY.value = e.contentOffset.y;
       if (e.contentOffset.y < -50) {
         if (!searchBarVisible) runOnJS(setSearchBarVisible)(true);
-      } else if (e.contentOffset.y > 80) {
+      } else if (e.contentOffset.y > 50) {
         runOnJS(setSearchBarVisible)(false);
       }
     },
@@ -107,8 +107,30 @@ export default function Example() {
   });
 
   const headerImageStyle = useAnimatedStyle(() => {
+    if (!searchBarVisible) {
+      const disappearence =
+        translationY.value > 0
+          ? 1 -
+            Math.abs(
+              searchBarVisible
+                ? translationY.value / (IMAGE_SIZE + 50)
+                : translationY.value / IMAGE_SIZE,
+            )
+          : 1;
+      return {
+        transform: [
+          {scale: Math.max(disappearence, 0.8)},
+          {
+            translateY:
+              translationY.value < 0 ? 0 : Math.abs(translationY.value) * 0.8,
+          },
+        ],
+        opacity: disappearence,
+      };
+    }
+
     const disappearence =
-      translationY.value > 0
+      translationY.value > 50
         ? 1 -
           Math.abs(
             searchBarVisible
