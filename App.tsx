@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import {View, StyleSheet, Text, Alert} from 'react-native';
+import React, {useState} from 'react';
+import {View, StyleSheet, Text} from 'react-native';
 import album from './src/assets/images/albumcover.jpeg';
 import Animated, {
   useSharedValue,
@@ -12,49 +12,15 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import axios from 'axios';
 import {Track} from './src/components/Track';
 import {Track as TrackType} from './src/types';
 import {Colors, Sizes, Fonts} from './src/constants';
-import {playlistTrackParser} from './src/utils/parsers/contentParsers';
+import {usePlaylist} from './src/hooks/usePlaylist';
 
-const playlistId = '37i9dQZF1EpjkVvtHAtmpC';
-
-const bearerToken =
-  'BQATS5IzP39l85OrBAF4JIf-ecQ7VYeiOHrgc6MdMTocDyri8YHnjuB0p6mzaRGeyYKsRr1w_ivSgW0UwYOKNQH0qSDTcEsj1S3uLoTuI3NMh2ucVN0agSVFeP049xXSKN1biMXlc1Ud3Z2W5RdHsTntmWBLcHoRpTfOBjDXWFhT5HqgNm1g5z5eIIlp';
 export default function App() {
   const [searchBarVisible, setSearchBarVisible] = useState(false);
 
-  const [isLoading, setIsLoading] = useState(false);
-
-  const [playlistData, setPlaylistData] = useState<TrackType[]>([]);
-
-  const fetchPlaylist = async () => {
-    setIsLoading(true);
-    try {
-      const {data} = await axios.get(
-        `https://api.spotify.com/v1/playlists/${playlistId}?fields=tracks(items)`,
-        {
-          headers: {
-            Authorization: `Bearer ${bearerToken}`,
-          },
-        },
-      );
-
-      setPlaylistData(playlistTrackParser(data.tracks.items));
-      setIsLoading(false);
-    } catch (e) {
-      console.log('e :>> ', e);
-      Alert.alert(
-        'Error',
-        'Something went wrong, Its highly likely that you need a Spotify Access Token',
-      );
-    }
-  };
-
-  useEffect(() => {
-    fetchPlaylist();
-  }, []);
+  const {isLoading, data} = usePlaylist();
 
   const translationY = useSharedValue(0);
 
@@ -70,7 +36,7 @@ export default function App() {
     },
   });
 
-  const pullBackStyle = useAnimatedStyle(() => {
+  const pulledBackPlaylistCoverStyle = useAnimatedStyle(() => {
     const scaleX = Math.abs(translationY.value) / 180;
 
     const scaleY = Math.abs(translationY.value) / 200;
@@ -285,7 +251,11 @@ export default function App() {
           </Animated.View>
           <Animated.Image
             source={album}
-            style={[styles.image, pullBackStyle, playlistCoverStyle]}
+            style={[
+              styles.image,
+              pulledBackPlaylistCoverStyle,
+              playlistCoverStyle,
+            ]}
             resizeMode="contain"
           />
           <View style={{paddingHorizontal: 20, paddingVertical: 10}}>
@@ -351,7 +321,7 @@ export default function App() {
             </View>
           </View>
         </LinearGradient>
-        {playlistData.map((item: TrackType) => (
+        {data.map((item: TrackType) => (
           <Track
             id={item.id}
             key={item.id}
