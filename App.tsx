@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {View, StyleSheet, Text, Alert, Image} from 'react-native';
-import album from './src/albumcover.jpeg';
+import album from './src/assets/images/albumcover.jpeg';
 import Animated, {
   useSharedValue,
   useAnimatedScrollHandler,
@@ -13,51 +13,8 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Entypo from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import axios from 'axios';
-
-const Track = ({name, cover, artists}) => {
-  return (
-    <View
-      style={{
-        flexDirection: 'row',
-        paddingHorizontal: 20,
-        paddingVertical: 10,
-        alignItems: 'center',
-      }}>
-      <View style={{flexDirection: 'row', alignItems: 'center'}}>
-        <Image style={{width: 54, height: 54}} source={{uri: cover}} />
-        <View style={{marginLeft: 18, width: '72%'}}>
-          <Text
-            ellipsizeMode="tail"
-            numberOfLines={1}
-            style={{
-              color: 'white',
-              fontSize: 16,
-              fontFamily: 'CircularStd-Medium',
-            }}>
-            {name}
-          </Text>
-          <Text
-            ellipsizeMode="tail"
-            numberOfLines={1}
-            style={{
-              fontSize: 14,
-              color: '#c4c4c4',
-              marginTop: 2,
-              fontFamily: 'CircularStd-Medium',
-            }}>
-            {artists}
-          </Text>
-        </View>
-      </View>
-      <Entypo
-        name="dots-three-horizontal"
-        color="#c4c4c4"
-        style={{marginLeft: 'auto'}}
-        size={24}
-      />
-    </View>
-  );
-};
+import {Track} from './src/components/Track';
+import {Track as TrackType} from './src/types';
 
 const playlistId = '37i9dQZF1EpjkVvtHAtmpC';
 
@@ -69,10 +26,10 @@ export default function App() {
 
   const [isLoading, setIsLoading] = useState(false);
 
-  const [playlistData, setPlaylistData] = useState([]);
+  const [playlistData, setPlaylistData] = useState<TrackType[]>([]);
 
-  const playlistTrackParser = items => {
-    if (!items) return [];
+  const playlistTrackParser = (items: any[]) => {
+    if (!items || !Array.isArray(items)) return [];
 
     const result = [];
 
@@ -81,7 +38,9 @@ export default function App() {
         id: item.track.id,
         name: item.track.name,
         cover: item.track.album.images[0].url,
-        artists: item.track.artists.map(artist => artist.name).join(', '),
+        artists: item.track.artists
+          .map((artist: any) => artist.name)
+          .join(', '),
       };
       result.push(track);
     }
@@ -104,6 +63,7 @@ export default function App() {
       setPlaylistData(playlistTrackParser(data.tracks.items));
       setIsLoading(false);
     } catch (e) {
+      console.log('e :>> ', e);
       Alert.alert('Error', 'Something went wrong. You might want to restart.');
     }
   };
@@ -215,7 +175,7 @@ export default function App() {
   const fixedHeaderStyle = useAnimatedStyle(() => {
     const cond = translationY.value > IMAGE_SIZE + 35;
     return {
-      opacity: cond,
+      opacity: Number(cond),
       display: cond ? 'flex' : 'none',
     };
   });
@@ -223,7 +183,7 @@ export default function App() {
   const fixedHeaderShuffleTextStyle = useAnimatedStyle(() => {
     const cond = translationY.value > IMAGE_SIZE + 235;
     return {
-      opacity: cond,
+      opacity: Number(cond),
       display: cond ? 'flex' : 'none',
     };
   });
@@ -447,6 +407,7 @@ export default function App() {
         </LinearGradient>
         {playlistData.map(item => (
           <Track
+            id={item.id}
             key={item.id}
             name={item.name}
             cover={item.cover}
