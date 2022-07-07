@@ -117,6 +117,24 @@ export default function App() {
       padding: 10,
       alignItems: 'center',
     },
+    headerItemText: {
+      fontSize: 14,
+      color: Colors.WHITE,
+      fontFamily: Fonts.BLACK,
+    },
+    headerShuffleIcon: {
+      position: 'absolute',
+      zIndex: 5,
+      top: 60,
+      right: 20,
+    },
+    playlistInfoText: {
+      fontSize: 16,
+      fontFamily: Fonts.MEDIUM,
+    },
+    CTAItem: {
+      marginLeft: 20,
+    },
   });
 
   const headerImageStyle = useAnimatedStyle(() => {
@@ -171,7 +189,7 @@ export default function App() {
     };
   });
 
-  const fixedHeaderShuffleTextStyle = useAnimatedStyle(() => {
+  const headerShuffleIconAnimated = useAnimatedStyle(() => {
     const cond = translationY.value > Sizes.PLAYLIST_COVER_SIZE + 170;
     return {
       display: cond ? 'flex' : 'none',
@@ -185,9 +203,7 @@ export default function App() {
 
     return {
       opacity,
-      //causes crash because of reanimated...
-      //marginTop: opacity > 0 ? 100 : 0,
-      //marginBottom: opacity > 0 ? 50 : 0,
+      //wanted to add vertical margins but causes crash because of reanimated...
     };
   });
 
@@ -196,10 +212,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Animated.View
-        style={[
-          {position: 'absolute', zIndex: 5, top: 60, right: 20},
-          fixedHeaderShuffleTextStyle,
-        ]}>
+        style={[styles.headerShuffleIcon, headerShuffleIconAnimated]}>
         <Ionicons name="play-circle-sharp" color={Colors.GREEN} size={60} />
         <View style={styles.shuffleIconContainer}>
           <Entypo name="shuffle" color={Colors.GREEN} size={10} />
@@ -221,7 +234,6 @@ export default function App() {
             padding: 20,
             alignItems: 'center',
             justifyContent: 'center',
-            zIndex: -1,
           }}
           colors={[
             Colors.LIGHTCORNFLOWERBLUE,
@@ -251,7 +263,7 @@ export default function App() {
         scrollEventThrottle={16}
         contentContainerStyle={{
           backgroundColor: Colors.BLACK,
-          paddingBottom: 30,
+          paddingBottom: 40,
         }}>
         <LinearGradient colors={[Colors.LIGHTCORNFLOWERBLUE, Colors.BLACK]}>
           <Animated.View
@@ -275,9 +287,7 @@ export default function App() {
                 <Text
                   style={{
                     marginLeft: 8,
-                    fontSize: 14,
-                    color: Colors.WHITE,
-                    fontFamily: Fonts.BLACK,
+                    ...styles.headerItemText,
                   }}>
                   Find in playlist
                 </Text>
@@ -288,14 +298,7 @@ export default function App() {
                   justifyContent: 'center',
                   ...styles.headerItem,
                 }}>
-                <Text
-                  style={{
-                    fontSize: 14,
-                    color: Colors.WHITE,
-                    fontFamily: Fonts.BLACK,
-                  }}>
-                  Sort
-                </Text>
+                <Text style={styles.headerItemText}>Sort</Text>
               </View>
             </View>
           </Animated.View>
@@ -308,40 +311,29 @@ export default function App() {
             <Text
               style={{
                 color: Colors.GREY,
-                fontSize: 16,
-                fontFamily: Fonts.MEDIUM,
+                ...styles.playlistInfoText,
               }}>
               Songs you love right now
             </Text>
-            <View
+            <Text
               style={{
-                flexDirection: 'row',
-                alignItems: 'center',
                 marginVertical: 8,
+                color: Colors.GREY,
+                ...styles.playlistInfoText,
               }}>
-              <Text
-                style={{
-                  color: Colors.GREY,
-                  fontSize: 16,
-                  fontFamily: Fonts.MEDIUM,
-                }}>
-                Made for
-              </Text>
+              Made for{' '}
               <Text
                 style={{
                   color: Colors.WHITE,
-                  fontSize: 16,
                   fontFamily: Fonts.BLACK,
-                  marginLeft: 4,
                 }}>
                 Cengizhan Hakan
               </Text>
-            </View>
+            </Text>
             <Text
               style={{
                 color: Colors.WHITE,
-                fontSize: 16,
-                fontFamily: Fonts.MEDIUM,
+                ...styles.playlistInfoText,
               }}>
               1 like · 1h 41m
             </Text>
@@ -355,7 +347,7 @@ export default function App() {
             }}>
             <AntDesign color={Colors.GREEN} name="heart" size={24} />
             <MaterialCommunityIcons
-              style={{marginLeft: 20}}
+              style={styles.CTAItem}
               color={Colors.GREEN}
               name="download-circle"
               size={24}
@@ -363,7 +355,7 @@ export default function App() {
             <Entypo
               name="dots-three-horizontal"
               color={Colors.GREY}
-              style={{marginLeft: 20}}
+              style={styles.CTAItem}
               size={24}
             />
             <View style={{marginLeft: 'auto'}}>
