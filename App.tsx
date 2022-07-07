@@ -137,31 +137,11 @@ export default function App() {
     },
   });
 
-  const headerImageStyle = useAnimatedStyle(() => {
-    if (!searchBarVisible) {
-      const disappearence =
-        translationY.value > 0
-          ? 1 -
-            Math.abs(
-              searchBarVisible
-                ? translationY.value / (Sizes.PLAYLIST_COVER_SIZE + 50)
-                : translationY.value / Sizes.PLAYLIST_COVER_SIZE,
-            )
-          : 1;
-      return {
-        transform: [
-          {scale: Math.max(disappearence, 0.8)},
-          {
-            translateY:
-              translationY.value < 0 ? 0 : Math.abs(translationY.value) * 0.8,
-          },
-        ],
-        opacity: disappearence,
-      };
-    }
+  const playlistCoverStyle = useAnimatedStyle(() => {
+    const offset = searchBarVisible ? 50 : 0;
 
-    const disappearence =
-      translationY.value > 50
+    const opacity =
+      translationY.value > offset
         ? 1 -
           Math.abs(
             searchBarVisible
@@ -169,15 +149,16 @@ export default function App() {
               : translationY.value / Sizes.PLAYLIST_COVER_SIZE,
           )
         : 1;
+
     return {
       transform: [
-        {scale: Math.max(disappearence, 0.8)},
+        {scale: Math.max(opacity, 0.8)},
         {
           translateY:
             translationY.value < 0 ? 0 : Math.abs(translationY.value) * 0.8,
         },
       ],
-      opacity: disappearence,
+      opacity,
     };
   });
 
@@ -304,7 +285,7 @@ export default function App() {
           </Animated.View>
           <Animated.Image
             source={album}
-            style={[styles.image, pullBackStyle, headerImageStyle]}
+            style={[styles.image, pullBackStyle, playlistCoverStyle]}
             resizeMode="contain"
           />
           <View style={{paddingHorizontal: 20, paddingVertical: 10}}>
@@ -370,7 +351,7 @@ export default function App() {
             </View>
           </View>
         </LinearGradient>
-        {playlistData.map(item => (
+        {playlistData.map((item: TrackType) => (
           <Track
             id={item.id}
             key={item.id}
