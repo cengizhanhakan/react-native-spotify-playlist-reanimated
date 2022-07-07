@@ -48,7 +48,7 @@ const Track = props => {
   );
 };
 
-export default function Example() {
+export default function App() {
   const [searchBarVisible, setSearchBarVisible] = useState(false);
 
   const BLACK = '#121212';
@@ -92,6 +92,7 @@ export default function Example() {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
+      backgroundColor: BLACK,
     },
     image: {
       marginTop: 50,
