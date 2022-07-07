@@ -4,4 +4,5 @@ export const Colors = {
   LIGHTBLACK: '#212121',
   LIGHTCORNFLOWERBLUE: '#6495ED',
   CORNFLOWERBLUE: '#5077BE',
+  GREY: '#C4C4C4',
 };

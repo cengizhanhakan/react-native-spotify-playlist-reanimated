@@ -1,3 +1,3 @@
 export const Sizes = {
-  IMAGE_SIZE: 250,
+  PLAYLIST_COVER_SIZE: 250,
 };
