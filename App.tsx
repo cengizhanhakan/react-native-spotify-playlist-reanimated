@@ -19,7 +19,7 @@ import {Track as TrackType} from './src/types';
 const playlistId = '37i9dQZF1EpjkVvtHAtmpC';
 
 const bearerToken =
-  'BQB-im0NWSYIBckB9IJWjQIMgWYD7Z5X-YwMZHBpvnOcMMX2Cj2SJHQ19soaWvxRcC9bpmHIAHFRfZOqmjKNolLYY4n2ubpYdDwsRqipsd_HqcKyanuGlQr0Bu1IRPHgLHbKrKRUTlFnGNEciket-OVezA_YKQVauf67JXFQqkIYK2XI96bDeDcXVDMR';
+  'BQAzRFGi9DfeFChOpgpsSlpZLWCfeLhSzxac_2Pe9XsUfUM0HwIBXBer0oKHoJ1L2JTVuC8GxIkejbeYL3rPYUGC5RM5U3fAcnH7BwDIvhQRpQsun_zs3K0WCi05inzQGl346F-8GmRt_tUaeroXkXsq8c4eIUeb3U53cMGd5cYOC3VNjE7iRrg2CK2T';
 
 export default function App() {
   const [searchBarVisible, setSearchBarVisible] = useState(false);
@@ -173,17 +173,16 @@ export default function App() {
   });
 
   const fixedHeaderStyle = useAnimatedStyle(() => {
-    const cond = translationY.value > IMAGE_SIZE + 35;
+    const opacity = (translationY.value - IMAGE_SIZE) / 21;
+
     return {
-      opacity: Number(cond),
-      display: cond ? 'flex' : 'none',
+      opacity,
     };
   });
 
   const fixedHeaderShuffleTextStyle = useAnimatedStyle(() => {
-    const cond = translationY.value > IMAGE_SIZE + 235;
+    const cond = translationY.value > IMAGE_SIZE + 170;
     return {
-      opacity: Number(cond),
       display: cond ? 'flex' : 'none',
     };
   });
@@ -207,7 +206,7 @@ export default function App() {
     <View style={styles.container}>
       <Animated.View
         style={[
-          {position: 'absolute', zIndex: 1, top: 60, right: 20},
+          {position: 'absolute', zIndex: 5, top: 60, right: 20},
           fixedHeaderShuffleTextStyle,
         ]}>
         <View style={{flexDirection: 'row'}}>
@@ -228,14 +227,23 @@ export default function App() {
           </View>
         </View>
       </Animated.View>
-      <Animated.View style={[fixedHeaderStyle]}>
+      <Animated.View
+        style={[
+          fixedHeaderStyle,
+          {
+            position: 'absolute',
+            top: 0,
+            zIndex: 1,
+            width: '100%',
+          },
+        ]}>
         <LinearGradient
           style={{
-            opacity: 0.95,
             height: 100,
             padding: 20,
             alignItems: 'center',
             justifyContent: 'center',
+            zIndex: -1,
           }}
           colors={[
             CORNFLOWERBLUE,
@@ -253,13 +261,13 @@ export default function App() {
             On Repeat
           </Text>
         </LinearGradient>
+        <Ionicons
+          style={{left: 15, top: 50, position: 'absolute'}}
+          name="chevron-back-sharp"
+          color="white"
+          size={24}
+        />
       </Animated.View>
-      <Ionicons
-        style={{left: 15, top: 50, position: 'absolute', zIndex: 1}}
-        name="chevron-back-sharp"
-        color="white"
-        size={24}
-      />
       <Animated.ScrollView
         onScroll={scrollHandler}
         scrollEventThrottle={16}

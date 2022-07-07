@@ -17,7 +17,7 @@ export const Track = ({id, name, cover, artists}: TrackType) => {
     },
     infoContainer: {
       marginLeft: 18,
-      width: '72%',
+      width: '67%',
     },
     trackName: {
       color: 'white',
