@@ -16,6 +16,7 @@ import axios from 'axios';
 import {Track} from './src/components/Track';
 import {Track as TrackType} from './src/types';
 import {Colors} from './src/constants/colors';
+import {Sizes} from './src/constants/sizes';
 
 const playlistId = '37i9dQZF1EpjkVvtHAtmpC';
 
@@ -65,15 +66,16 @@ export default function App() {
       setIsLoading(false);
     } catch (e) {
       console.log('e :>> ', e);
-      Alert.alert('Error', 'Something went wrong. You might want to restart.');
+      Alert.alert(
+        'Error',
+        'Something went wrong, Its highly likely that you need a Spotify Access Token',
+      );
     }
   };
 
   useEffect(() => {
     fetchPlaylist();
   }, []);
-
-  const IMAGE_SIZE = 250;
 
   const translationY = useSharedValue(0);
 
@@ -114,7 +116,7 @@ export default function App() {
       marginTop: 50,
       marginBottom: 20,
       width: '100%',
-      height: IMAGE_SIZE,
+      height: Sizes.IMAGE_SIZE,
     },
     artistName: {
       alignSelf: 'center',
@@ -130,8 +132,8 @@ export default function App() {
           ? 1 -
             Math.abs(
               searchBarVisible
-                ? translationY.value / (IMAGE_SIZE + 50)
-                : translationY.value / IMAGE_SIZE,
+                ? translationY.value / (Sizes.IMAGE_SIZE + 50)
+                : translationY.value / Sizes.IMAGE_SIZE,
             )
           : 1;
       return {
@@ -151,8 +153,8 @@ export default function App() {
         ? 1 -
           Math.abs(
             searchBarVisible
-              ? translationY.value / (IMAGE_SIZE + 50)
-              : translationY.value / IMAGE_SIZE,
+              ? translationY.value / (Sizes.IMAGE_SIZE + 50)
+              : translationY.value / Sizes.IMAGE_SIZE,
           )
         : 1;
     return {
@@ -168,7 +170,7 @@ export default function App() {
   });
 
   const fixedHeaderStyle = useAnimatedStyle(() => {
-    const opacity = (translationY.value - IMAGE_SIZE) / 21;
+    const opacity = (translationY.value - Sizes.IMAGE_SIZE) / 21;
 
     return {
       opacity,
@@ -176,7 +178,7 @@ export default function App() {
   });
 
   const fixedHeaderShuffleTextStyle = useAnimatedStyle(() => {
-    const cond = translationY.value > IMAGE_SIZE + 170;
+    const cond = translationY.value > Sizes.IMAGE_SIZE + 170;
     return {
       display: cond ? 'flex' : 'none',
     };
@@ -189,7 +191,7 @@ export default function App() {
 
     return {
       opacity,
-      //causes crash idk why
+      //causes crash because of reanimated...
       //marginTop: opacity > 0 ? 100 : 0,
       //marginBottom: opacity > 0 ? 50 : 0,
     };
