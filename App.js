@@ -16,10 +16,16 @@ import axios from 'axios';
 
 const Track = ({name, cover, artists}) => {
   return (
-    <View style={{flexDirection: 'row', padding: 20, alignItems: 'center'}}>
+    <View
+      style={{
+        flexDirection: 'row',
+        paddingHorizontal: 20,
+        paddingVertical: 10,
+        alignItems: 'center',
+      }}>
       <View style={{flexDirection: 'row', alignItems: 'center'}}>
         <Image style={{width: 54, height: 54}} source={{uri: cover}} />
-        <View style={{marginLeft: 18, width: '75%'}}>
+        <View style={{marginLeft: 18, width: '72%'}}>
           <Text
             ellipsizeMode="tail"
             numberOfLines={1}
