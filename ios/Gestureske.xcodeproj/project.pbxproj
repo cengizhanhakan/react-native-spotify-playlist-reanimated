@@ -14,7 +14,7 @@
 		050D05E30E9942EF96BE6381 /* Proxima Nova Alt Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = A5C05A2E4F324BCF8C1A224C /* Proxima Nova Alt Reg.otf */; };
 		077E3E4C253A49959106BE10 /* Proxima Nova Alt Cond Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = EB94A035BF064B439A9AA263 /* Proxima Nova Alt Cond Black.otf */; };
 		0E537B22AC564E2FBC62F2C7 /* Proxima Nova Cond Reg It.otf in Resources */ = {isa = PBXBuildFile; fileRef = E0EF92FAB97C492997477134 /* Proxima Nova Cond Reg It.otf */; };
-		105F1D95E4E5AEAA7FAFC85E /* libPods-Gestureske.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D09BEB3D1503A03E53D30875 /* libPods-Gestureske.a */; };
+		0FB9F4F9F8164A4F958EBB25 /* libPods-Gestureske.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9B757D15DFB1E8A56F1D03 /* libPods-Gestureske.a */; };
 		1182AF2808F64712B7DEE6BC /* Proxima Nova Semibold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C4D48C314CE462EACB8DC03 /* Proxima Nova Semibold Italic.otf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -49,13 +49,13 @@
 		45E3D4238F6B4437AA73503A /* ProximaNova-ExtrabldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF1182744CC64B22914654F1 /* ProximaNova-ExtrabldIt.otf */; };
 		46EF56F406B34675A810D418 /* Proxima Nova Alt Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D8E8DF4A83B453EAC5FCF06 /* Proxima Nova Alt Light.otf */; };
 		4B0D3AAC70364506944297AC /* Proxima Nova Cond Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE8EF5216F034723B2E43342 /* Proxima Nova Cond Reg.otf */; };
+		4B35EC6759C8FC581D81FDC1 /* libPods-Gestureske-GestureskeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 003DD146680D4DBD1AC22EA0 /* libPods-Gestureske-GestureskeTests.a */; };
 		50218F340A4E43D1B7B1F842 /* ProximaNovaExCn-ThinIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8EEFB592D853416084359DF0 /* ProximaNovaExCn-ThinIt.otf */; };
 		519467B513CA4B3ABA8B05D8 /* Proxima Nova Cond Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA1D1163BFE142ED9E2C78E8 /* Proxima Nova Cond Bold.otf */; };
 		52E87C75859E4ED1A5711795 /* CircularStd-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB4639B458934AA19CE79834 /* CircularStd-BookItalic.otf */; };
 		542938C350BB4431AC598E3A /* Proxima Nova ScOsf Cond Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = A4E1EF9E38464F50903AFE27 /* Proxima Nova ScOsf Cond Reg.otf */; };
 		55A19D8E142B49538C8ED133 /* Proxima Nova ScOsf Cond Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 74A1119F38B74E48A98FBDBC /* Proxima Nova ScOsf Cond Bold.otf */; };
 		56E867DBF8284E8F9057A6A0 /* ProximaNovaExCn-BlackIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD47198C909445FF99306730 /* ProximaNovaExCn-BlackIt.otf */; };
-		58AFCF5B4B210001A6325EE1 /* libPods-Gestureske-GestureskeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C67FA64364E8A47C793C127 /* libPods-Gestureske-GestureskeTests.a */; };
 		5C93DB5B19C344B7B5DE4E68 /* CircularStd-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F8D80898461B4C63B67609CB /* CircularStd-BlackItalic.otf */; };
 		5D9C8EA8C37D4912AEC576CB /* Proxima Nova Alt Cond Black It.otf in Resources */ = {isa = PBXBuildFile; fileRef = 093E295D7F0A4821B6DFA9B4 /* Proxima Nova Alt Cond Black It.otf */; };
 		5EE6E9E16EE74710A72E6944 /* Proxima Nova Light It.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F72A0F240DD44C18DA5D0EE /* Proxima Nova Light It.otf */; };
@@ -125,6 +125,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		003DD146680D4DBD1AC22EA0 /* libPods-Gestureske-GestureskeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gestureske-GestureskeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356EE1AD99517003FC87E /* GestureskeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestureskeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* GestureskeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureskeTests.m; sourceTree = "<group>"; };
@@ -146,6 +147,7 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Gestureske/main.m; sourceTree = "<group>"; };
 		1A0FC4C02CD24FFBB8C68BCE /* Proxima Nova Semibold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Semibold.otf"; path = "../src/assets/fonts/Proxima Nova Semibold.otf"; sourceTree = "<group>"; };
 		1B48BEDB8E69422AA0C6B4B3 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
+		1B9B757D15DFB1E8A56F1D03 /* libPods-Gestureske.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gestureske.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C3A3062F96146AC8365A826 /* ProximaNovaCond-ExtrabldIt.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNovaCond-ExtrabldIt.otf"; path = "../src/assets/fonts/ProximaNovaCond-ExtrabldIt.otf"; sourceTree = "<group>"; };
 		23B9F49EE4084198AF6384DA /* Proxima Nova Condensed Light Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Condensed Light Italic.otf"; path = "../src/assets/fonts/Proxima Nova Condensed Light Italic.otf"; sourceTree = "<group>"; };
 		23DC0760F69F46C19E0F0964 /* Proxima Nova Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Regular.otf"; path = "../src/assets/fonts/Proxima Nova Regular.otf"; sourceTree = "<group>"; };
@@ -153,7 +155,6 @@
 		25D24C93C3DB4A42A910241E /* Proxima Nova ScOsf Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova ScOsf Black.otf"; path = "../src/assets/fonts/Proxima Nova ScOsf Black.otf"; sourceTree = "<group>"; };
 		284B01971E9848E5A814D415 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		28C4C8AED23D4DBFADDFE445 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
-		2A1C6C5958671554464F835C /* Pods-Gestureske.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gestureske.release.xcconfig"; path = "Target Support Files/Pods-Gestureske/Pods-Gestureske.release.xcconfig"; sourceTree = "<group>"; };
 		2B12F0C875B340669819E463 /* Proxima Nova Regular Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Regular Italic.otf"; path = "../src/assets/fonts/Proxima Nova Regular Italic.otf"; sourceTree = "<group>"; };
 		2B750855695748AF9D7EE5E0 /* ProximaNovaCond-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNovaCond-Thin.otf"; path = "../src/assets/fonts/ProximaNovaCond-Thin.otf"; sourceTree = "<group>"; };
 		2DEDF0F1A04E4C4FA53A956C /* Proxima Nova ScOsf Cond Bold It.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova ScOsf Cond Bold It.otf"; path = "../src/assets/fonts/Proxima Nova ScOsf Cond Bold It.otf"; sourceTree = "<group>"; };
@@ -169,7 +170,6 @@
 		392AAB57FEDB49F080C5AB8F /* ProximaNovaExCn-SemiboldIt.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNovaExCn-SemiboldIt.otf"; path = "../src/assets/fonts/ProximaNovaExCn-SemiboldIt.otf"; sourceTree = "<group>"; };
 		39872F8B7AAB441E93093B1B /* Proxima Nova Alt Light It.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Alt Light It.otf"; path = "../src/assets/fonts/Proxima Nova Alt Light It.otf"; sourceTree = "<group>"; };
 		3C6AD78C7EAB43DBAE59F25F /* ProximaNovaExCn-RegularIt.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNovaExCn-RegularIt.otf"; path = "../src/assets/fonts/ProximaNovaExCn-RegularIt.otf"; sourceTree = "<group>"; };
-		3D66FD8E8E7A113ECEE7FD56 /* Pods-Gestureske-GestureskeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gestureske-GestureskeTests.release.xcconfig"; path = "Target Support Files/Pods-Gestureske-GestureskeTests/Pods-Gestureske-GestureskeTests.release.xcconfig"; sourceTree = "<group>"; };
 		3F0DC955FF8A4A1D860FBB2E /* Proxima Nova Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Black.otf"; path = "../src/assets/fonts/Proxima Nova Black.otf"; sourceTree = "<group>"; };
 		3FA477697C274C3FA7DBBF61 /* Proxima Nova ScOsf Reg.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova ScOsf Reg.otf"; path = "../src/assets/fonts/Proxima Nova ScOsf Reg.otf"; sourceTree = "<group>"; };
 		42D21A8A3F93404599849D61 /* ProximaNovaExCn-ExtrabldIt.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNovaExCn-ExtrabldIt.otf"; path = "../src/assets/fonts/ProximaNovaExCn-ExtrabldIt.otf"; sourceTree = "<group>"; };
@@ -179,6 +179,7 @@
 		4DC15ECA664A4991B42F518A /* ProximaNovaCond-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNovaCond-Bold.otf"; path = "../src/assets/fonts/ProximaNovaCond-Bold.otf"; sourceTree = "<group>"; };
 		4FC7FDD8895E48918BF2A5E2 /* Proxima Nova Bold It.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Bold It.otf"; path = "../src/assets/fonts/Proxima Nova Bold It.otf"; sourceTree = "<group>"; };
 		538B1ED256704D08BBD87215 /* Proxima Nova ScOsf Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova ScOsf Light.otf"; path = "../src/assets/fonts/Proxima Nova ScOsf Light.otf"; sourceTree = "<group>"; };
+		5602EAF6049B0547A2370E2C /* Pods-Gestureske-GestureskeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gestureske-GestureskeTests.debug.xcconfig"; path = "Target Support Files/Pods-Gestureske-GestureskeTests/Pods-Gestureske-GestureskeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		611C891184FB4579B0C6F152 /* Proxima Nova Reg It.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Reg It.otf"; path = "../src/assets/fonts/Proxima Nova Reg It.otf"; sourceTree = "<group>"; };
 		688C3963EB034D86909BE733 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		6A49C54CA646443A82535E2B /* Proxima Nova Alt Reg It.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Alt Reg It.otf"; path = "../src/assets/fonts/Proxima Nova Alt Reg It.otf"; sourceTree = "<group>"; };
@@ -190,7 +191,6 @@
 		75B08E7D5C514186B859CEBC /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		75F0F1AB7DD241BEAB856AD8 /* Proxima Nova Alt Cond Bold It.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Alt Cond Bold It.otf"; path = "../src/assets/fonts/Proxima Nova Alt Cond Bold It.otf"; sourceTree = "<group>"; };
 		78C44D1275AB4CC1A0A90602 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
-		7A5929F6CE86332F15770A98 /* Pods-Gestureske.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gestureske.debug.xcconfig"; path = "Target Support Files/Pods-Gestureske/Pods-Gestureske.debug.xcconfig"; sourceTree = "<group>"; };
 		7A9B934302664F209748902C /* Proxima Nova ScOsf Cond Reg It.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova ScOsf Cond Reg It.otf"; path = "../src/assets/fonts/Proxima Nova ScOsf Cond Reg It.otf"; sourceTree = "<group>"; };
 		7B5F7694C20E4E45990CE3B2 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		7D432EB13466493CB8DF3CEA /* Proxima Nova Extrabold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Extrabold.otf"; path = "../src/assets/fonts/Proxima Nova Extrabold.otf"; sourceTree = "<group>"; };
@@ -201,8 +201,7 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Gestureske/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82260E72B0774CD3968E4831 /* CircularStd-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-Light.otf"; path = "../src/assets/fonts/CircularStd-Light.otf"; sourceTree = "<group>"; };
 		83847DE39C0346A98124B1B6 /* CircularStd-Light Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-Light Italic.otf"; path = "../src/assets/fonts/CircularStd-Light Italic.otf"; sourceTree = "<group>"; };
-		844E14A91B604FB2106B4E37 /* Pods-Gestureske-GestureskeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gestureske-GestureskeTests.debug.xcconfig"; path = "Target Support Files/Pods-Gestureske-GestureskeTests/Pods-Gestureske-GestureskeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8C67FA64364E8A47C793C127 /* libPods-Gestureske-GestureskeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gestureske-GestureskeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		87F78101A1C929A01BB5ECD0 /* Pods-Gestureske-GestureskeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gestureske-GestureskeTests.release.xcconfig"; path = "Target Support Files/Pods-Gestureske-GestureskeTests/Pods-Gestureske-GestureskeTests.release.xcconfig"; sourceTree = "<group>"; };
 		8E640BA25F2E4650A1531054 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		8EEFB592D853416084359DF0 /* ProximaNovaExCn-ThinIt.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNovaExCn-ThinIt.otf"; path = "../src/assets/fonts/ProximaNovaExCn-ThinIt.otf"; sourceTree = "<group>"; };
 		8F72A0F240DD44C18DA5D0EE /* Proxima Nova Light It.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Light It.otf"; path = "../src/assets/fonts/Proxima Nova Light It.otf"; sourceTree = "<group>"; };
@@ -233,7 +232,6 @@
 		CCE9C9E328A4403FB910F383 /* Proxima Nova Cond Bold It.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Cond Bold It.otf"; path = "../src/assets/fonts/Proxima Nova Cond Bold It.otf"; sourceTree = "<group>"; };
 		CE8EF5216F034723B2E43342 /* Proxima Nova Cond Reg.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Cond Reg.otf"; path = "../src/assets/fonts/Proxima Nova Cond Reg.otf"; sourceTree = "<group>"; };
 		CF1F662591634E05A5740F04 /* Proxima Nova ScOsf Cond Black It.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova ScOsf Cond Black It.otf"; path = "../src/assets/fonts/Proxima Nova ScOsf Cond Black It.otf"; sourceTree = "<group>"; };
-		D09BEB3D1503A03E53D30875 /* libPods-Gestureske.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gestureske.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1B963BD07584783904DC6C4 /* Proxima Nova ScOsf Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova ScOsf Bold.otf"; path = "../src/assets/fonts/Proxima Nova ScOsf Bold.otf"; sourceTree = "<group>"; };
 		D69733C9C8F642D982B6D4AA /* Proxima Nova Cond Black It.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Cond Black It.otf"; path = "../src/assets/fonts/Proxima Nova Cond Black It.otf"; sourceTree = "<group>"; };
 		D6B9CACF73E34877BCCE2866 /* ProximaNovaExCn-BoldIt.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNovaExCn-BoldIt.otf"; path = "../src/assets/fonts/ProximaNovaExCn-BoldIt.otf"; sourceTree = "<group>"; };
@@ -249,6 +247,7 @@
 		EB94A035BF064B439A9AA263 /* Proxima Nova Alt Cond Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Alt Cond Black.otf"; path = "../src/assets/fonts/Proxima Nova Alt Cond Black.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED362468FCA041558E86CBE3 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		F41D6C8E9818EBF19CC27F6E /* Pods-Gestureske.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gestureske.debug.xcconfig"; path = "Target Support Files/Pods-Gestureske/Pods-Gestureske.debug.xcconfig"; sourceTree = "<group>"; };
 		F4593C8DDA4D4A4295E27E4B /* Proxima Nova Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Light.otf"; path = "../src/assets/fonts/Proxima Nova Light.otf"; sourceTree = "<group>"; };
 		F6C72AFDD6D345EFA98B2083 /* ProximaNova-BlackIt.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNova-BlackIt.otf"; path = "../src/assets/fonts/ProximaNova-BlackIt.otf"; sourceTree = "<group>"; };
 		F8030C1C601446F3B0D745D7 /* Proxima Nova Black It.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Black It.otf"; path = "../src/assets/fonts/Proxima Nova Black It.otf"; sourceTree = "<group>"; };
@@ -256,6 +255,7 @@
 		FD3E7388E74740F1A3A85F69 /* Proxima Nova Condensed Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Condensed Regular.otf"; path = "../src/assets/fonts/Proxima Nova Condensed Regular.otf"; sourceTree = "<group>"; };
 		FD9E760F6FF549FA8528D579 /* Proxima Nova Alt Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Alt Black.otf"; path = "../src/assets/fonts/Proxima Nova Alt Black.otf"; sourceTree = "<group>"; };
 		FF1182744CC64B22914654F1 /* ProximaNova-ExtrabldIt.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNova-ExtrabldIt.otf"; path = "../src/assets/fonts/ProximaNova-ExtrabldIt.otf"; sourceTree = "<group>"; };
+		FF84C6F3019F26909DB76B1E /* Pods-Gestureske.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gestureske.release.xcconfig"; path = "Target Support Files/Pods-Gestureske/Pods-Gestureske.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,7 +263,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58AFCF5B4B210001A6325EE1 /* libPods-Gestureske-GestureskeTests.a in Frameworks */,
+				4B35EC6759C8FC581D81FDC1 /* libPods-Gestureske-GestureskeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +271,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				105F1D95E4E5AEAA7FAFC85E /* libPods-Gestureske.a in Frameworks */,
+				0FB9F4F9F8164A4F958EBB25 /* libPods-Gestureske.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,8 +312,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				D09BEB3D1503A03E53D30875 /* libPods-Gestureske.a */,
-				8C67FA64364E8A47C793C127 /* libPods-Gestureske-GestureskeTests.a */,
+				1B9B757D15DFB1E8A56F1D03 /* libPods-Gestureske.a */,
+				003DD146680D4DBD1AC22EA0 /* libPods-Gestureske-GestureskeTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -321,10 +321,10 @@
 		45DAD7B09B9DC02632EF3CF0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7A5929F6CE86332F15770A98 /* Pods-Gestureske.debug.xcconfig */,
-				2A1C6C5958671554464F835C /* Pods-Gestureske.release.xcconfig */,
-				844E14A91B604FB2106B4E37 /* Pods-Gestureske-GestureskeTests.debug.xcconfig */,
-				3D66FD8E8E7A113ECEE7FD56 /* Pods-Gestureske-GestureskeTests.release.xcconfig */,
+				F41D6C8E9818EBF19CC27F6E /* Pods-Gestureske.debug.xcconfig */,
+				FF84C6F3019F26909DB76B1E /* Pods-Gestureske.release.xcconfig */,
+				5602EAF6049B0547A2370E2C /* Pods-Gestureske-GestureskeTests.debug.xcconfig */,
+				87F78101A1C929A01BB5ECD0 /* Pods-Gestureske-GestureskeTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -489,12 +489,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "GestureskeTests" */;
 			buildPhases = (
-				20EF8C048A7F4A5E33B66A50 /* [CP] Check Pods Manifest.lock */,
+				72A73A571405B0D17D67896B /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				3137147A53A981804F4AF5E4 /* [CP] Embed Pods Frameworks */,
-				272E82AB1E1E937226859F6B /* [CP] Copy Pods Resources */,
+				A6580C75C4BFF367F7441E02 /* [CP] Embed Pods Frameworks */,
+				56CCB89AF5FC9A0F771E6A43 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -510,14 +510,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Gestureske" */;
 			buildPhases = (
-				610C5334A8C754A30DC50EE2 /* [CP] Check Pods Manifest.lock */,
+				E4D508381E4B428F9C694D3E /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				28A3A70E9EC54DC439E6BAB8 /* [CP] Embed Pods Frameworks */,
-				B8D8CBF730381812CF1786A9 /* [CP] Copy Pods Resources */,
+				A4E36B4C2179227C199125C6 /* [CP] Embed Pods Frameworks */,
+				BFB38011F79809D40127848D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -696,7 +696,24 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		20EF8C048A7F4A5E33B66A50 /* [CP] Check Pods Manifest.lock */ = {
+		56CCB89AF5FC9A0F771E6A43 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gestureske-GestureskeTests/Pods-Gestureske-GestureskeTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gestureske-GestureskeTests/Pods-Gestureske-GestureskeTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gestureske-GestureskeTests/Pods-Gestureske-GestureskeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72A73A571405B0D17D67896B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -718,24 +735,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		272E82AB1E1E937226859F6B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gestureske-GestureskeTests/Pods-Gestureske-GestureskeTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gestureske-GestureskeTests/Pods-Gestureske-GestureskeTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gestureske-GestureskeTests/Pods-Gestureske-GestureskeTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		28A3A70E9EC54DC439E6BAB8 /* [CP] Embed Pods Frameworks */ = {
+		A4E36B4C2179227C199125C6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -752,7 +752,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gestureske/Pods-Gestureske-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3137147A53A981804F4AF5E4 /* [CP] Embed Pods Frameworks */ = {
+		A6580C75C4BFF367F7441E02 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -769,7 +769,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gestureske-GestureskeTests/Pods-Gestureske-GestureskeTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		610C5334A8C754A30DC50EE2 /* [CP] Check Pods Manifest.lock */ = {
+		BFB38011F79809D40127848D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gestureske/Pods-Gestureske-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gestureske/Pods-Gestureske-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gestureske/Pods-Gestureske-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4D508381E4B428F9C694D3E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -789,23 +806,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B8D8CBF730381812CF1786A9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gestureske/Pods-Gestureske-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gestureske/Pods-Gestureske-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gestureske/Pods-Gestureske-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -860,7 +860,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 844E14A91B604FB2106B4E37 /* Pods-Gestureske-GestureskeTests.debug.xcconfig */;
+			baseConfigurationReference = 5602EAF6049B0547A2370E2C /* Pods-Gestureske-GestureskeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -887,7 +887,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D66FD8E8E7A113ECEE7FD56 /* Pods-Gestureske-GestureskeTests.release.xcconfig */;
+			baseConfigurationReference = 87F78101A1C929A01BB5ECD0 /* Pods-Gestureske-GestureskeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -911,12 +911,12 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A5929F6CE86332F15770A98 /* Pods-Gestureske.debug.xcconfig */;
+			baseConfigurationReference = F41D6C8E9818EBF19CC27F6E /* Pods-Gestureske.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BXCDZFX2GF;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Gestureske/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -938,12 +938,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A1C6C5958671554464F835C /* Pods-Gestureske.release.xcconfig */;
+			baseConfigurationReference = FF84C6F3019F26909DB76B1E /* Pods-Gestureske.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BXCDZFX2GF;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Gestureske/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
