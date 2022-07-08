@@ -25,3 +25,7 @@ cd ios && pod install
 - Update the .env file with the access token you retrieved and the playlist id of your choosing.
 
 - Run the app.
+
+## Preview
+
+[![Preview](https://s8.gifyu.com/images/hq.gif 'preview')](https://s8.gifyu.com/images/hq.gif 'preview')
